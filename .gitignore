@@ -1,0 +1,15 @@
+# Personal / private knowledge — never commit
+private/
+*SENSITIVE*
+*credentials*
+.env
+.env.*
+
+# Obsidian workspace state (keep your own vault settings local)
+.obsidian/workspace*
+.obsidian/cache
+.obsidian/plugins/*/data.json
+
+# OS / editor
+.DS_Store
+Thumbs.db
