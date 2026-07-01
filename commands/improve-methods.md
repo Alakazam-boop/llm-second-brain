@@ -16,10 +16,10 @@ improvement wherever one exists; mastery is a moving target. Run it repeatedly. 
 that beats the benchmark, it says so and records *what it checked* — and the search resumes next time.
 
 Read FIRST and obey:
-- `D:\SecondBrain\SELF-IMPROVEMENT-METHOD.md` — the meta-method + the SAFEGUARD.
-- `D:\SecondBrain\methods\METHODS-REGISTRY.md` — methods, files, versions, benchmarks.
-- `D:\SecondBrain\methods\graveyard.md` — already-rejected ideas (don't re-try).
-- `D:\SecondBrain\CLAUDE.md` (incl. §10 gated content) + `DOCUMENTATION-METHOD.md`.
+- `SELF-IMPROVEMENT-METHOD.md` — the meta-method + the SAFEGUARD.
+- `methods\METHODS-REGISTRY.md` — methods, files, versions, benchmarks.
+- `methods\graveyard.md` — already-rejected ideas (don't re-try).
+- `CLAUDE.md` (incl. §10 gated content) + `DOCUMENTATION-METHOD.md`.
 
 ## The one rule that overrides everything
 A method change is adopted ONLY if the **benchmark evidence** shows it improves THIS AI's own results

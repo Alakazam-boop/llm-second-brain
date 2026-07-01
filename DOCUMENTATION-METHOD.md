@@ -211,28 +211,28 @@ The things the notes still can't answer (next research targets).
 - **Reference** (`type: reference`): dry, complete, lookup-oriented. Tables/lists of exact values,
   commands, specs. No narrative. Optimised for "find the fact fast", not for reading start-to-end.
 
-## TYPE 7 — Personalized-Explanation doc  ·  `type: explainer`  ·  `wiki/concepts/` (suffix `-for-the user`)
+## TYPE 7 — Personalized-Explanation doc  ·  `type: explainer`  ·  `wiki/concepts/` (suffix `.explained`)
 **Method: learning science (TYPE 3) + personalization for ONE known reader.** This is the "human
 conversion": it takes what the AI has mastered and re-documents it the fastest, easiest way for **the user
 specifically** to get it. It combines two inputs: the mastered topic notes (e.g. a TYPE 5 mastery page)
-**and** the [[the user-learning-profile]] (how he learns, what he likes, what to avoid, his goals).
+**and** the [[learning-profile]] (how the learner learns, what the learner likes, what to avoid, the learner's goals).
 
 Evidence base it adds on top of TYPE 3:
-- **Prior-knowledge anchoring** (Ausubel / constructivism) → connect every new idea to something he
-  already knows, using analogies from his world (data/code, markets, fitness, genomics — per the profile).
+- **Prior-knowledge anchoring** (Ausubel / constructivism) → connect every new idea to something the learner
+  already knows, using analogies from the learner's world (the learner's own domains — per the profile).
 - **Cognitive-load management** (Sweller) → one idea at a time, worked examples, a visual.
-- **Motivation** (self-determination) → open with why it matters *to his goals*.
-- **Plain language + action-first** (his stated preferences) → no jargon, lead with what he can do.
+- **Motivation** (self-determination) → open with why it matters *to the learner's goals*.
+- **Plain language + action-first** (the learner's stated preferences) → no jargon, lead with what the learner can do.
 - **Light active recall** → a couple of gentle gut-check questions, not a hard exam.
-- **VISUAL-FIRST (his core trait)** → he's an imagination/visual learner who learns poorly by reading
+- **VISUAL-FIRST (the learner's core trait)** → the learner is an imagination/visual learner who learns poorly by reading
   alone and finds dry math graphs "nauseating". Lead with a diagram/mental image/analogy; pair every
   idea with a picture; suggest a video/animation where one would help. Words support the visual, not
-  the other way round. (see [[the user-learning-profile]])
+  the other way round. (see [[learning-profile]])
 
 > 🔒 **On-demand ONLY.** Never auto-generate this. It is produced solely when the user runs the `/explain`
 > command. All other documentation stays in its normal AI-facing type by default.
 > ⚠️ **Validated differently:** the success of an Personalized-Explanation doc is whether **the user learns
-> faster/easier** — judged by *his* feedback, NOT by an AI exam. (See `/improve-methods`.)
+> faster/easier** — judged by *the learner's* feedback, NOT by an AI exam. (See `/improve-methods`.)
 
 ```markdown
 ---
@@ -240,17 +240,17 @@ title: <Topic> — Explained for the user
 type: explainer
 created/updated/tags: ...
 based_on: ["[[<topic>-mastery]]"]     # the source knowledge
-profile: ["[[the user-learning-profile]]"]
+profile: ["[[learning-profile]]"]
 ---
 
 ## Why this matters to you
-One hook tied to a real goal/interest of his.
+One hook tied to a real goal/interest of the learner's.
 
 ## The big idea in one breath
 The plainest possible one-liner.
 
 ## Building it up (anchored to what you know)
-Step by step; each new idea linked to something familiar, with an analogy from his world.
+Step by step; each new idea linked to something familiar, with an analogy from the learner's world.
 
 ## See it
 A simple diagram, table, or worked example.

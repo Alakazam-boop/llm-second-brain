@@ -11,7 +11,7 @@ The request may be a topic, a concept, a skill, a **job role/title**, or **"buil
 In every case the real target is a **goal**: master the knowledge needed to *do* that thing. You must
 first understand the goal, map what mastering it requires, size the exam to that scope, then learn + test.
 
-Vault: `D:\SecondBrain`. Read `D:\SecondBrain\CLAUDE.md` (incl. §10 gated content) and
+Vault: `your vault root`. Read `CLAUDE.md` (incl. §10 gated content) and
 `DOCUMENTATION-METHOD.md` first; obey both.
 
 ## Five isolated roles (each a fresh-context subagent) + you as blind courier
@@ -24,7 +24,7 @@ grades or pass one agent another's reasoning.
 > 📐 **Exam upgrade (weighted, out-of-box):** the exam uses 4 difficulty **rungs** with **marks** —
 > Recall(1) · Apply(2) · Analyze(3) · **Transfer(5, out-of-box)** — graded by a **point-breakdown** with
 > **cite-the-principle** partial credit, passed on a **separate bar per rung**. Full design + rationale:
-> `D:\SecondBrain\methods\weighted-exam-design.md`. This file is the operational spec.
+> `methods\weighted-exam-design.md`. This file is the operational spec.
 
 ---
 
@@ -81,7 +81,7 @@ Check the ledger (`learned-topics.md`) first; if already mastered, refresh only 
 
 **D0 — consult the Second Brain first (don't re-learn what we already have).** Run the shared retrieval
 service to pull everything the vault already holds on the blueprint objectives:
-`python D:\a local LLM runtime\sbm\researcher.py "<vault>" "<objective/topic>" --json`. Use its **core/related** notes
+`python tools/researcher.py "<vault>" "<objective/topic>" --json`. Use its **core/related** notes
 as the starting base; only research the web for what's missing or stale. (Respect any gated-file
 permission request it returns.)
 
@@ -204,7 +204,7 @@ This step runs no matter how the loop ends, so records are never left stale:
 
 ## 🤝 The team — /learn in the organization
 The commands work as one org, not in isolation:
-- **Calls the Researcher** (`D:\a local LLM runtime\sbm\researcher.py`) first (Phase D0) — reuse what the brain holds
+- **Calls the Researcher** (`tools/researcher.py`) first (Phase D0) — reuse what the brain holds
   before touching the web.
 - **Is called BY `/ask`** (web fallback when the brain can't answer) and **BY `/improve-methods`** (when
   the court needs a technique genuinely researched + mastered before proposing it).

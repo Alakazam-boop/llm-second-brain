@@ -11,7 +11,7 @@ frozen: true
 
 > The Newton **learn-benchmark** measures *research/learning* quality and **cannot** judge the SBM's
 > retrieval/catalog code. This benchmark fills that gap for the **Researcher** component
-> (`D:\a local LLM runtime\sbm\researcher.py`): a frozen retrieval gold-set so any ranking/graph/weighting change
+> (`tools/researcher.py`): a frozen retrieval gold-set so any ranking/graph/weighting change
 > can be A/B'd for regressions. Created by `/improve-methods` (slash sbm, 2026-06-30).
 
 ## What it is (and is NOT)
@@ -21,14 +21,14 @@ frozen: true
   just the mean. A win here is **necessary but not sufficient** — the synthetic corpus ≠ the user's real vault.
 
 ## Files (runnable)
-- `D:\a local LLM runtime\sbm\benchmarks\make_fixture.py` — builds the FROZEN 10-note fixture deterministically.
-- `D:\a local LLM runtime\sbm\benchmarks\score.py` — holds the frozen gold-set + scorer; prints per-query + mean
+- `tools/benchmarks/make_fixture.py` — builds the FROZEN 10-note fixture deterministically.
+- `tools/benchmarks/score.py` — holds the frozen gold-set + scorer; prints per-query + mean
   precision@3 / recall / MRR.
-- `D:\a local LLM runtime\sbm\benchmarks\fixture\` — the generated corpus (regenerate with `make_fixture.py`).
+- `tools/benchmarks/fixture\` — the generated corpus (regenerate with `make_fixture.py`).
 
 ## Protocol (A/B)
 ```
-cd D:\a local LLM runtime\sbm\benchmarks
+cd tools/benchmarks
 python score.py                 # current researcher: build fixture, scan, clean, score
 # ...apply a candidate change to researcher.py on a branch/backup...
 python score.py --no-build      # re-score on the same fixture

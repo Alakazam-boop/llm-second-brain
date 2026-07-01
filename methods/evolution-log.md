@@ -61,7 +61,7 @@ Entry format:
 - Backup: methods/backups/researcher.py.2026-06-30.bak
 
 ## [2026-06-30] NEW asset — SBM Researcher Retrieval Benchmark v1.0
-- Change: created `methods/benchmarks/sbm-retrieval-benchmark.md` + `D:\a local LLM runtime\sbm\benchmarks\`
+- Change: created `methods/benchmarks/sbm-retrieval-benchmark.md` + `tools/benchmarks/`
   (make_fixture.py, score.py, fixture/). Frozen 10-query retrieval gold-set → P@3/recall/MRR regression
   guard for `researcher.py`. Closes the structural gap where SBM changes had no benchmark gate.
 - Source: `/improve-methods` slash sbm · Label: AI (evaluation infrastructure)

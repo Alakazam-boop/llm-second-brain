@@ -5,11 +5,15 @@
 > topics, writes cited notes, proves its own mastery with exams, and *improves its own methods
 > only when the evidence says it should*.
 
+![Status](https://img.shields.io/badge/status-actively%20developed%20(WIP)-orange)
 ![Type](https://img.shields.io/badge/type-framework-blueviolet)
 ![Runtime](https://img.shields.io/badge/runtime-Claude%20Code%20%2F%20any%20agentic%20LLM-000000)
 ![Store](https://img.shields.io/badge/store-Obsidian%20%2B%20Markdown-7c3aed)
 ![Skills](https://img.shields.io/badge/skills-5%20commands-informational)
 ![License](https://img.shields.io/badge/license-MIT-green)
+
+> 🚧 **Actively developed.** This is an ongoing personal project — the schema, skills, and methods
+> evolve over time (in fact, the system improves its *own* methods; see §6). Expect changes.
 
 > **This is a de-personalised, reusable template.** Clone it, point your agent at it, and start
 > your own brain. It ships with the *system* (rules, methods, skills, benchmarks) — not anyone's
@@ -205,14 +209,42 @@ cd my-brain
 # 3. Install the skills for Claude Code
 #    Copy the command files where Claude Code looks for user commands:
 cp commands/*.md ~/.claude/commands/         # macOS/Linux
-#    (Windows: copy commands\*.md to %USERPROFILE%\.claude\commands\)
+#    (Windows: copy commands/*.md to %USERPROFILE%\.claude\commands/)
 
-# 4. Start your agent IN the vault folder so it reads CLAUDE.md first, then:
+# 4. Install the MASTER PROMPT (highly recommended)
+#    Open MASTER-PROMPT.md, fill in the two <...> placeholders, and paste the code block into
+#    your assistant's custom instructions / system prompt (e.g. Claude → Settings →
+#    Personalization, or a Claude Project's system prompt). This makes the model use the brain
+#    first and treat the commands as a team — even in plain web chat with no file access.
+
+# 5. Start your agent IN the vault folder so it reads CLAUDE.md first, then run a command:
 #    /learn <a topic>      · /ask <a question>      · /sbm
 ```
 
 > The agent always reads `CLAUDE.md` first — that file is what turns a generic chatbot into a
-> disciplined wiki maintainer.
+> disciplined wiki maintainer. The **[MASTER-PROMPT.md](MASTER-PROMPT.md)** is the copy-paste
+> operating contract for any surface (including web chat).
+
+### 8.1 How to use each command (exact usage)
+
+All commands are invoked as slash-commands in Claude Code, from inside your vault folder. Argument
+in `<>`; everything after the command name is passed as the topic/question.
+
+| Command | Type this | What happens | When to use |
+|---------|-----------|--------------|-------------|
+| **/learn** | `/learn quantum entanglement` <br>`/learn become a bioinformatics analyst` | Interviews the goal → maps scope → researches (≥2 dated sources/claim) → writes cited notes → **gives you a blind, weighted exam** → certifies mastery in `learned-topics.md` | You want to *master* a topic, skill, or role end-to-end |
+| **/ask** | `/ask what did I conclude about vector databases?` | A Researcher pulls every relevant note → the model studies them → returns an **expert answer with `[[citations]]`** → saves it as a new note. Falls back to `/learn` only if the brain doesn't know | Quick, grounded answers from what you already know |
+| **/explain** | `/explain transformers` | Re-explains a **already-mastered** topic in *your* learning style (from `wiki/entities/learning-profile.md`) — visual-first, analogies from your fields | You learned it but want it re-taught simply |
+| **/sbm** | `/sbm` <br>`/sbm find gaps in my biology notes` | 5-agent maintenance pass: catalogs every note, cleans/de-duplicates, links related pages, surfaces gaps & patterns (safety-gated on private files) | Housekeeping; run periodically |
+| **/improve-methods** | `/improve-methods` <br>`/improve-methods /learn` | Runs the **courtroom**: researches a better technique → argues both sides → a judge rules on **benchmark evidence** → adopts only with your approval | Occasionally, to keep methods state-of-the-art |
+
+**First-time tips**
+- Before `/explain` works well, fill in `templates/learning-profile.md` and save it as
+  `wiki/entities/learning-profile.md`.
+- `/learn` writes into `wiki/` and updates `learned-topics.md`, `index.md`, and `log.md` automatically.
+- Drop any source file into `raw/` and just say *"ingest this"* — the agent writes a `wiki/sources/` note.
+- No file access (plain web chat)? The master prompt still makes the model follow the same order and
+  tell you what to file later.
 
 ---
 
