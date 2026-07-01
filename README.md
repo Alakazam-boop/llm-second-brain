@@ -19,6 +19,10 @@
 > your own brain. It ships with the *system* (rules, methods, skills, benchmarks) — not anyone's
 > private notes.
 
+> 📖 **New here? Read the [complete GUIDE](GUIDE.md).** It walks through every install step, documents
+> each command and every agent inside it, gives token-cost estimates per model (Claude, GPT, Gemini,
+> Groq), and shows exactly where to paste the Master Prompt in each AI.
+
 ---
 
 ## 📑 Table of Contents
